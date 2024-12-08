@@ -81,6 +81,18 @@ input {
   color: #545050
 }
 
+.content__details {
+  box-sizing: border-box;
+  flex-direction: column;
+  display: flex;
+  justify-content: start;
+  min-width: 399px;
+  max-height: 534px;
+  margin-left: 30px;
+  overflow: auto;
+}
+
+
 .result {
   align-self: end;
 }
@@ -270,16 +282,5 @@ input[type="checkbox"]:hover~span {
   width: 15px;
   height: 15px;
   margin-right: 2px;
-}
-
-.content__details {
-  box-sizing: border-box;
-  flex-direction: column;
-  display: flex;
-  justify-content: end;
-  min-width: 399px;
-  max-height: 534px;
-  margin-left: 30px;
-  overflow: auto;
 }
 
