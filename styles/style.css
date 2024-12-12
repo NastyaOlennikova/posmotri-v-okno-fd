@@ -70,7 +70,7 @@ input {
 }
 
 .result__video-container {
-  width: inline-size;
+  inline-size: 711px;
   height: 386px;
   position: relative;
 }
@@ -117,11 +117,7 @@ input {
   height: 20px;
 }
 
-.search-form__label:has(.search-form__pseudo-checkbox):focus {
-  outline: none;
-}
-
-.search-form__label:has(.search-form__pseudo-checkbox):focus-within {
+.search-form__label:has(:focus-visible) {
   outline: 1px solid white;
   outline-offset: 1px;
 }
@@ -166,7 +162,7 @@ input[type="text"] {
   border-bottom: 1px solid white;
 }
 
-input[type="text"]:focus {
+input[type="text"]:focus-visible {
   outline: 1px solid #fff;
   outline-offset: 1px;
 }
@@ -191,11 +187,7 @@ input[type="text"]:active {
   text-decoration: underline;
 }
 
-.button:focus-visible {
-  outline: none;
-}
-
-.button:focus-visible {
+.button:focus {
   outline: 1px solid #fff;
   outline-offset: 1px;
 }
@@ -223,9 +215,6 @@ input[type="text"]:active {
   font-size: 75px;
   line-height: 0.9;
   text-transform: uppercase;
-  position: sticky;
-  top: 0px;
-  z-index: 1;
 }
 
 .content__accent {
@@ -249,27 +238,18 @@ input[type="text"]:active {
 }
 
 .content__list-item:last-child {
-  margin-block-end: 0px;
+  margin-block-end: 0;
 }
 
 .content__video-card {
   padding: 2px;
-  height: 107px;
   display: flex;
   justify-content: space-between;
 }
 
-.content__video-card:hover {
-  cursor: pointer;
-  text-decoration: underline solid white;
-  text-underline-position: under;
-}
-
-.content__video-card:active {
-  background-color: #545050;
-}
 
 .content__video-card-title {
+  max-width: 200px;
   font-family: 'Oswald', sans-serif;
   font-size: 30px;
   line-height: 1;
@@ -277,6 +257,9 @@ input[type="text"]:active {
   text-transform: uppercase;
   color: #fff;
   margin-block-end: 6px;
+  text-overflow: ellipsis;   
+  white-space: nowrap;   
+  overflow: hidden;
 }
 
 .content__video-card-description {
@@ -296,14 +279,24 @@ input[type="text"]:active {
 
 .content__card-link {
   text-decoration: none;
+  display: block;
+}
+
+.content__card-link:hover {
+  cursor: pointer;
+  text-decoration: underline solid white;
+  text-underline-position: under;
 }
 
 .content__card-link:focus-visible {
-  display: block;
   outline: 1px solid #fff;
 }
 
-.content__card-link_current .content__video-card {
+.content__card-link:active {
+  background-color: #545050;
+}
+
+.content__card-link_current {
   background-color: #545050;
 }
 
