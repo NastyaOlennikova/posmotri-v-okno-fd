@@ -1,1 +1,1 @@
-https://github.com/NastyaOlennikova/posmotri_v_okno-fd
+https://github.com/NastyaOlennikova/posmotri-v-okno-fd
